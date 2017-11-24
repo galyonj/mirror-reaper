@@ -1,0 +1,136 @@
+.post-container {
+
+	.latest {
+		margin-bottom: 30px;
+
+		h2 {
+			margin-top: 0;
+		}
+
+		div[class^="col-xs-12"]:first-of-type {
+			a {
+				display: block;
+				position: relative;
+				margin-bottom: 20px;
+
+				.ribbon {
+					height: 75px;
+					left: -5px;
+					overflow: hidden;
+					position: absolute;
+					text-align: right;
+					top: -5px;
+					width: 75px;
+					z-index: 1;
+
+					span {
+						background: $brand-primary;
+						box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 0.8);
+						color: #fff;
+						display: block;
+						font-size: 17px;
+						font-weight: 600;
+						left: -21px;
+						line-height: 20px;
+						position: absolute;
+						text-align: center;
+						text-transform: uppercase;
+						top: 19px;
+						transform: rotate(-45deg);
+						width: 100px;
+
+						&::before {
+							border-left: 3px solid $brand-primary;
+							border-right: 3px solid transparent;
+							border-bottom: 3px solid transparent;
+							border-top: 3px solid $brand-primary;
+							content: '';
+							left: 0;
+							position: absolute;
+							top: 100%;
+							z-index: -1;
+						}
+
+						&::after {
+							border-left: 3px solid transparent;
+							border-right: 3px solid $brand-primary;
+							border-bottom: 3px solid transparent;
+							border-top: 3px solid $brand-primary;
+							content: '';
+							position: absolute;
+							right: 0;
+							top: 100%;
+							z-index: -1;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	p {
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		a {
+			font-weight: 600;
+		}
+	}
+}
+
+.post-repeater {
+	display: inline-block;
+	width: 100%;
+	margin: 0 0 30px 0;
+	vertical-align: top;
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+@media #{ $small } {
+	.post-repeater {
+		width: 345px;
+		margin: 0 30px 30px 0;
+
+		&:nth-of-type( odd ) {
+			margin: 0 0 30px 0;
+		}
+	}
+}
+
+@media #{ $medium } {
+	.post-repeater {
+		width: 293px;
+		margin: 0 30px 30px 0;
+
+		&:nth-of-type( odd ) {
+			margin: 0 30px 30px 0;
+		}
+
+		&:nth-of-type( 3n+1 ) {
+			margin: 0 0 30px 0;
+		}
+	}
+}
+
+@media #{ $large } {
+	.post-container {
+		.latest {
+			div[class^="col-xs-12"]:first-of-type {
+				a {
+					display:       block;
+					position:      relative;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.post-repeater {
+		width: 360px;
+		margin: 0 30px 30px 0;
+	}
+}

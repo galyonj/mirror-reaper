@@ -1,0 +1,53 @@
+// Main artists page display
+.artist-item {
+	img {
+		@include desaturate;
+
+		&:active,
+		&:focus,
+		&:hover {
+			filter: none;
+		}
+	}
+}
+/*
+ul.artists {
+	list-style-type: none;
+	margin:          0;
+	padding:         0;
+
+	li {
+		float:  left;
+		margin: 0 0 17px 0;
+		width:  100%;
+
+		a {
+			img {
+				@include desaturate;
+
+				&:active,
+				&:focus,
+				&:hover {
+					filter: none;
+				}
+			}
+		}
+	}
+
+	@media #{ $medium } {
+		li {
+			margin: 0 30px 17px 0;
+			width: 293px;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@media #{ $large } {
+		li {
+			width: 359px;
+		}
+	}
+}*/

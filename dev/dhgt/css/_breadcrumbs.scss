@@ -1,0 +1,19 @@
+.breadcrumb {
+	background: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 20px 0 30px;
+
+	& > li {
+		font-size: $font-size-small;
+		font-weight: 600;
+
+		&:last-of-type {
+			font-weight: 300;
+		}
+
+		& + li:before {
+			content: "\00BB";
+		}
+	}
+}
