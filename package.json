@@ -1,0 +1,33 @@
+{
+  "name": "galyonj.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:galyonj/mirror-reaper.git",
+  "author": "John Galyon <galyon.jb@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "figlet-cli": "^0.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-prompt": "^0.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "node-bourbon": "^4.2.8",
+    "readdir-enhanced": "^2.0.0",
+    "smooth-scroll": "^12.1.5",
+    "yargonaut": "^1.1.2",
+    "yargs": "^10.0.3"
+  },
+  "jshintConfig": {
+    "esversion": 6,
+    "eqeqeq": true,
+    "curly": true
+  }
+}
