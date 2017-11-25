@@ -19,7 +19,7 @@ get_header(); ?>
 				<p class="lead">We couldn't find the page you're trying to reach. It's possible that the link you followed is out of date.</p>
 				<p>If you typed the link manually, please check to make sure that you've typed it correctly.</p>
 				<hr>
-				<p>Of course, if you'd rather listen to Fishbone&hellips;we can't say we blame you.</p>
+				<p>Of course, if you'd rather listen to Fishbone…we can't say we blame you.</p>
 				<p>
 					<div class="embed-responsive embed-responsive-16by9">
 						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uwX0fkGf5rA" frameborder="0" allowfullscreen></iframe>
