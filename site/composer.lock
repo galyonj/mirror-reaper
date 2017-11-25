@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eee131786cda09ac1bcc8f96ad78be77",
+    "content-hash": "0308a33872289479f33499fab8da3f4f",
     "packages": [
         {
             "name": "composer/installers",
@@ -121,7 +121,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-08-09 07:53:48"
+            "time": "2017-08-09T07:53:48+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -160,7 +160,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2017-11-16 01:32:51"
+            "time": "2017-11-16T01:32:51+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
@@ -200,7 +200,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2017-11-16 01:32:46"
+            "time": "2017-11-16T01:32:46+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -249,7 +249,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2017-05-31 18:42:33"
+            "time": "2017-05-31T18:42:33+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -291,7 +291,7 @@
             "keywords": [
                 "env"
             ],
-            "time": "2017-07-17 20:41:59"
+            "time": "2017-07-17T20:41:59+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -348,7 +348,7 @@
             "keywords": [
                 "wordpress wp bcrypt password"
             ],
-            "time": "2016-03-01 16:27:06"
+            "time": "2016-03-01T16:27:06+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -398,7 +398,247 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-09-01 10:05:43"
+            "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/autodescription",
+            "version": "3.0.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/autodescription/",
+                "reference": "tags/3.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/autodescription.3.0.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/autodescription/"
+        },
+        {
+            "name": "wpackagist-plugin/bootstrap-3-shortcodes",
+            "version": "3.3.10",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/bootstrap-3-shortcodes/",
+                "reference": "tags/3.3.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/bootstrap-3-shortcodes.3.3.10.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/bootstrap-3-shortcodes/"
+        },
+        {
+            "name": "wpackagist-plugin/debug-this",
+            "version": "0.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/debug-this/",
+                "reference": "tags/0.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-this.0.5.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/debug-this/"
+        },
+        {
+            "name": "wpackagist-plugin/gmail-smtp",
+            "version": "1.1.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/gmail-smtp/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/gmail-smtp.zip?timestamp=1510898368",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/gmail-smtp/"
+        },
+        {
+            "name": "wpackagist-plugin/malinky-ajax-pagination",
+            "version": "2.0.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/malinky-ajax-pagination/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/malinky-ajax-pagination.zip?timestamp=1486064804",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/malinky-ajax-pagination/"
+        },
+        {
+            "name": "wpackagist-plugin/ninja-forms",
+            "version": "3.2.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ninja-forms/",
+                "reference": "tags/3.2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ninja-forms.3.2.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ninja-forms/"
+        },
+        {
+            "name": "wpackagist-plugin/no-category-base-wpml",
+            "version": "1.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/no-category-base-wpml/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/no-category-base-wpml.zip?timestamp=1492195990",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/no-category-base-wpml/"
+        },
+        {
+            "name": "wpackagist-plugin/oembed-gist",
+            "version": "4.8.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/oembed-gist/",
+                "reference": "tags/4.8.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/oembed-gist.4.8.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/oembed-gist/"
+        },
+        {
+            "name": "wpackagist-plugin/sucuri-scanner",
+            "version": "1.8.11",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/sucuri-scanner/",
+                "reference": "tags/1.8.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/sucuri-scanner.1.8.11.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/sucuri-scanner/"
+        },
+        {
+            "name": "wpackagist-plugin/tinymce-advanced",
+            "version": "4.6.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/tinymce-advanced/",
+                "reference": "tags/4.6.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/tinymce-advanced.4.6.7.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/tinymce-advanced/"
+        },
+        {
+            "name": "wpackagist-plugin/what-the-file",
+            "version": "1.5.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/what-the-file/",
+                "reference": "tags/1.5.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/what-the-file.1.5.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/what-the-file/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce",
+            "version": "3.2.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woocommerce/",
+                "reference": "tags/3.2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.3.2.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce/"
         }
     ],
     "packages-dev": [
@@ -451,7 +691,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-10-16 22:40:25"
+            "time": "2017-10-16T22:40:25+00:00"
         }
     ],
     "aliases": [],
