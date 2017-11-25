@@ -12,12 +12,21 @@
 get_header(); ?>
 
 	<main class="col-xs-12 col-sm-8 col-md-9 pull-left">
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php get_template_part( 'partial/content', 'breadcrumbs' ); ?>
-			<?php get_template_part( 'partial/content', 'header' ); ?>
-			<p class="lead">We couldn't find the page you're trying to reach. It's possible that the link you followed is out of date.</p>
-			<p>If you typed the link manually, please check to make sure that you've typed it correctly.</p>
-		</article>
+		<?php get_template_part( 'partial/content', 'breadcrumbs' ); ?>
+		<div class="row">
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php get_template_part( 'partial/content', 'header' ); ?>
+				<p class="lead">We couldn't find the page you're trying to reach. It's possible that the link you followed is out of date.</p>
+				<p>If you typed the link manually, please check to make sure that you've typed it correctly.</p>
+				<hr>
+				<p>Of course, if you'd rather listen to Fishbone&hellips;we can't say we blame you.</p>
+				<p>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uwX0fkGf5rA" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</p>
+			</article>
+		</div>
 	</main>
 
 <?php get_footer(); ?>
