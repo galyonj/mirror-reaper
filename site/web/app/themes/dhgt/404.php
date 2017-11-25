@@ -11,10 +11,10 @@
 
 get_header(); ?>
 
-	<main class="col-xs-12 col-sm-8 col-md-9 pull-left">
+	<main class="container">
 		<?php get_template_part( 'partial/content', 'breadcrumbs' ); ?>
 		<div class="row">
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<article id="<?php the_ID(); ?>" <?php post_class( 'col-md-8' ); ?>>
 				<?php get_template_part( 'partial/content', 'header' ); ?>
 				<p class="lead">We couldn't find the page you're trying to reach. It's possible that the link you followed is out of date.</p>
 				<p>If you typed the link manually, please check to make sure that you've typed it correctly.</p>
