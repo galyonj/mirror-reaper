@@ -58,7 +58,7 @@
 										<span class="icon-bar"></span>
 										<span class="sr-only">toggle navigation</span>
 									</button>
-									<a href="<?php echo home_url(); ?>" class="navbar-brand">
+									<a href="<?php echo get_home_url(); ?>" class="navbar-brand">
 										<img src="<?php echo trailingslashit( get_template_directory_uri() );
 										?>img/john.svg" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'name' ); ?>">
 									</a>
