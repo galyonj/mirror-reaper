@@ -4,7 +4,7 @@ article {
 		font-weight: 300;
 
 		a {
-			border-bottom: 3px solid darken( $brand-primary, 15% );
+			border-bottom: 3px solid $brand-primary;
 			color:         $brand-primary;
 			font-weight:   300;
 			padding:       2px 2px -2px;
@@ -13,7 +13,7 @@ article {
 			&:active,
 			&:focus,
 			&:hover {
-				background:      darken( $brand-primary, 15% );
+				background:      $brand-primary;
 				color:           #fff;
 				text-decoration: none;
 			}
