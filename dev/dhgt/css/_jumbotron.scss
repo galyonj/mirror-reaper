@@ -30,3 +30,23 @@
 		}
 	}
 }
+
+@media #{ $small } {
+	.jumbotron {
+		.jumbotron-text {
+			a {
+				margin-bottom: $line-height-computed / 2;
+			}
+		}
+	}
+}
+
+@media #{ $large } {
+	.jumbotron {
+		.jumbotron-text {
+			a {
+				font-size: ceil( ( $font-size-h1 * 1.4 ) );
+			}
+		}
+	}
+}

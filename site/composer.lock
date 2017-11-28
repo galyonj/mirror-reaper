@@ -662,15 +662,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-facebook-reviews",
-            "version": "3.1",
+            "version": "3.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-facebook-reviews/",
-                "reference": "tags/3.1"
+                "reference": "tags/3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-facebook-reviews.3.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-facebook-reviews.3.2.zip",
                 "reference": null,
                 "shasum": null
             },

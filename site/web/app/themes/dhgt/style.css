@@ -6409,3 +6409,11 @@ ul.artists {
       border-top: 1px solid #fff;
       color: #fff;
       padding-top: 20px; }
+
+@media screen and (min-width: 768px) {
+  .jumbotron .jumbotron-text a {
+    margin-bottom: 13px; } }
+
+@media screen and (min-width: 1200px) {
+  .jumbotron .jumbotron-text a {
+    font-size: 52px; } }

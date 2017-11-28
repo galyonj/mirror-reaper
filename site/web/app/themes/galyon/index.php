@@ -14,11 +14,6 @@ get_header();?>
 <main class="col-xs-12 col-sm-8 col-md-9 pull-left">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="post-container">
-			<?php if( is_user_logged_in() ) {
-				echo get_home_url() . '<br>';
-				echo home_url() . '<br>';
-				echo site_url();
-			} ?>
 			<?php
 			if( have_posts() ) {
 				while( have_posts() ) {
