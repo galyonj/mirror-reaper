@@ -16,8 +16,8 @@ get_header(); ?>
 			<?php get_template_part( 'partial/content', 'breadcrumbs' ); ?>
 			<?php get_template_part( 'partial/content', 'header' ); ?>
 			<p class="lead">We couldn't find the page you're trying to reach. It's possible that the link you followed is out of date. If you typed the link manually, please check to make sure that you've typed it correctly.</p>
-			<p>In the meantime, here's a picture of one of my cats.</p>
 			<p><img src="<?php echo trailingslashit( get_stylesheet_directory_uri() ); ?>img/404/pixel.jpg" class="img-responsive"></p>
+			<p>In the meantime, here's a picture of one of my cats.</p>
 		</article>
 	</main>
 
