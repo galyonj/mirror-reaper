@@ -4,16 +4,17 @@ article {
 		font-weight: 300;
 
 		a {
+			border-bottom: 3px solid darken( $brand-primary, 15% );
 			color:         $brand-primary;
-			font-weight:   500;
+			font-weight:   300;
 			padding:       2px 2px -2px;
 			transition:    all $speed $easing;
-			
+
 			&:active,
 			&:focus,
 			&:hover {
-				background:      $text-color;
-				color:           $gray-lighter;
+				background:      darken( $brand-primary, 15% );
+				color:           #fff;
 				text-decoration: none;
 			}
 		}

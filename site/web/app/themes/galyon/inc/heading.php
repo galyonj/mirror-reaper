@@ -7,7 +7,7 @@
  *
  * @version 2.1.0
  * @package WordPress
- * @subpackage dhgt
+ * @subpackage galyon
  */
 
 function content_heading() {
@@ -20,7 +20,8 @@ function content_heading() {
 	if( is_front_page() && is_home() ) {
 
 		// As a default, we'll show the site title and tag line
-		echo '<h1>Welcome to ' . get_bloginfo( 'name' ) . '</h1>';
+		$welcome_msg = 'Welcome to';
+		echo '<h1>' . $welcome_msg . ' ' . get_bloginfo( 'name' ) . '</h1>';
 
 	} elseif( is_front_page() || is_home() ) {
 
@@ -50,45 +51,50 @@ function content_heading() {
 				if( $results !== 0 ) {
 					if( $results > 1 ) {
 						echo '<h1>';
-						printf( __( $results . ' results returned for &ldquo;%s&rdquo;', 'dhgt' ), get_search_query() );
+						printf( __( $results . ' results returned for &ldquo;%s&rdquo;', 'galyon' ), get_search_query() );
 						echo '</h1>';
 					} else {
 						echo '<h1>';
-						printf( __( $results . ' result returned for &ldquo;%s&rdquo;', 'dhgt' ), get_search_query() );
+						printf( __( $results . ' result returned for &ldquo;%s&rdquo;', 'galyon' ), get_search_query() );
 						echo '</h1>';
 					}
 				} else {
 					echo '<h1>';
-					printf( __( 'Nothing returned for &ldquo;%s&rdquo;', 'dhgt' ), get_search_query() );
+					printf( __( 'Nothing returned for &ldquo;%s&rdquo;', 'galyon' ), get_search_query() );
 					echo '</h1>';
 				}
 			} elseif( is_404() ) {
-				echo '<h1>Page not found.</h1>';
+				echo '<h1>';
+				printf( __( 'Whoops!', 'galyon' ) );
+				echo '</h1>';
 			} else {
 				// This outputs our fallback condition
 				// for any archive page – categories, tags
 				// author pages, date-based archives, etc.
 				if( is_archive() ) {
 					if( is_category() ) {
-						echo '<h1>Category: &ldquo;';
+						echo '<h1>';
 						single_cat_title( '', true );
-						echo '&rdquo;</h1>';
 
-						$category = get_the_category( $post->ID );
-						$cat_id   = get_cat_ID( $category[0]->name );
-
-						if( !empty(category_description() ) ) {
-							echo category_description( $cat_id );
+						if( category_description() ) {
+							echo '<br><small>';
+							echo category_description();
+							echo '</small>';
 						}
+
+						echo '</h1>';
 
 					} elseif( is_tag() ) {
-						echo '<h1>Tag: &ldquo;';
+						echo '<h1>';
 						single_tag_title( '', true);
-						echo '&rdquo;</h1>';
 
 						if( tag_description() ) {
-							echo '<p class="lead term-description">' . tag_description() . '</p>';
+							echo '<br><small>';
+							echo tag_description();
+							echo '</small>';
 						}
+						echo '</h1>';
+
 					} elseif( is_author() ) {
 						echo '<h1>' . get_the_author() . '</h1>';
 					} elseif( is_date() ) {

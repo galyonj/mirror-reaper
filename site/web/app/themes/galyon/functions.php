@@ -14,6 +14,7 @@ require_once 'inc/pagination.php';
 require_once 'inc/heading.php';
 require_once 'inc/editor.php';
 require_once 'inc/default-thumb.php';
+//require_once 'inc/random-img.php';
 
 // Enable support for excerpts on page content types
 function add_page_excerpts() {
@@ -163,11 +164,11 @@ function word_count() {
  */
 function manual_excerpt_more( $excerpt ) {
 	$excerpt_more = '';
-	$icon = '<i class="fa fa-plus-square" aria-hidden="true"></i>';
+	//$teaser = 'Read More';
 	if( is_home() || is_category() || is_tag() || is_search() ) {
 
 		if( has_excerpt() ) {
-			$excerpt_more = '<a href="' . get_permalink() . '" rel="nofollow">' . $icon . '</a>';
+			$excerpt_more = ' <a href="' . get_permalink() . '" rel="nofollow">Read More</a>';
 		}
 
 	}
