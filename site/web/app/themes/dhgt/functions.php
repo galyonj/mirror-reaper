@@ -12,6 +12,7 @@
 require_once 'inc/breadcrumbs.php';
 require_once 'inc/pagination.php';
 require_once 'inc/headings.php';
+require_once 'inc/portfolios.php';
 
 // Enable support for excerpts on page content types
 function add_page_excerpts() {

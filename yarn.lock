@@ -2579,6 +2579,10 @@ supports-color@^4.0.0, supports-color@^4.4.0:
   dependencies:
     has-flag "^2.0.0"
 
+swipebox@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/swipebox/-/swipebox-1.4.6.tgz#8b879af681a9d2bdad019bc92f5f35b6db5928db"
+
 tar@^2.0.0:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/tar/-/tar-2.2.1.tgz#8e4d2a256c0e2185c6b18ad694aec968b83cb1d1"

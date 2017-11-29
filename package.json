@@ -22,6 +22,7 @@
     "node-bourbon": "^4.2.8",
     "readdir-enhanced": "^2.0.0",
     "smooth-scroll": "^12.1.5",
+    "swipebox": "^1.4.6",
     "yargonaut": "^1.1.2",
     "yargs": "^10.0.3"
   },
