@@ -1,43 +1,52 @@
 <?php
 /**
- * Partial to output artists landing page content
+ * Partial to output artists page content
  * Author     : John Galyon
  * Author URI : https://galyonj.com
  * Created    : October 19, 2017
- * @version 1.0.0
+ * @version 1.1.0
  * @package WordPress
  * @subpackage galyonj
- */
+ */ ?>
 
-$args = array(
-	'ignore_sticky_posts' => true,
-	'order'               => 'ASC',
-	'orderby'             => 'title',
-	'post_parent'         => $post->ID,
-	'post_type'           => 'page',
-	'post_status'         => 'publish',
-);
+<article id="<?php the_ID(); ?>" <?php post_class( 'col-xs-12' ); ?>>
+	<?php get_template_part( 'partial/content', 'header' ); ?>
 
-$artist_pages = new WP_Query( $args );
+	<?php the_content(); ?>
 
-if( $artist_pages->have_posts() ) : ?>
+	<?php
 
-	<div class="row artists-row">
+	$args = array(
+		'ignore_sticky_posts' => true,
+		'order'               => 'ASC',
+		'orderby'             => 'title',
+		'post_parent'         => $post->ID,
+		'post_type'           => 'page',
+		'post_status'         => 'publish',
+	);
 
-		<?php while( $artist_pages->have_posts() ) : $artist_pages->the_post(); ?>
+	$artist_pages = new WP_Query( $args );
 
-			<div class="col-xs-12 col-sm-4 artist-item">
-				<h2><?php echo current( explode( ' ', get_the_title() ) ); ?></h2>
-				<p>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark">
-						<img src="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" class="img-responsive">
-					</a>
-				</p>
-				<?php the_excerpt(); ?>
-			</div>
+	if( $artist_pages->have_posts() ) : ?>
 
-		<?php endwhile; ?>
+		<div class="row artists-row">
 
-	</div>
+			<?php while( $artist_pages->have_posts() ) : $artist_pages->the_post(); ?>
 
-<?php endif; wp_reset_postdata(); ?>
+				<div class="col-xs-12 col-sm-4 artist-item">
+					<h2><?php echo current( explode( ' ', get_the_title() ) ); ?></h2>
+					<p>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark">
+							<img src="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" class="img-responsive">
+						</a>
+					</p>
+					<?php the_excerpt(); ?>
+				</div>
+
+			<?php endwhile; ?>
+
+		</div>
+
+	<?php endif; wp_reset_postdata(); ?>
+
+</article>
