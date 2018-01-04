@@ -42,26 +42,45 @@ function breadcrumbs() {
 			$post_type = get_post_type();
 
 			// If it is a custom post type display name and link
-			if( $post_type != 'post' ) {
+			if ( $post_type != 'post' ) {
 
-				$post_type_object = get_post_type_object( $post_type );
+				$post_type_object  = get_post_type_object( $post_type );
 				$post_type_archive = get_post_type_archive_link( $post_type );
 
-				echo '<li><a href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
+				echo '<li><a href="' . $post_type_archive . '" title="' . $post_type_object -> labels -> name . '">' . $post_type_object -> labels -> name . '</a></li>';
 
 			}
 
-			$custom_tax_name = get_queried_object()->name;
+			$custom_tax_name = get_queried_object() -> name;
 			echo '<li>' . $custom_tax_name . '</li>';
 
-			// But what if it's just a single page all by itself?
+		} elseif ( is_singular( array( 'artist', 'portfolio' ) ) ) {
+
+			if ( is_singular( 'artist' ) ) {
+
+				echo '<li><a href="' . get_the_permalink( get_page_by_title( 'artists' ) ) . '" title="' . get_the_title( get_page_by_title( 'artists'	) ) . '">' . get_the_title( get_page_by_title( 'artists'	) ) . '</a></li>';
+
+				echo '<li>' . $post->post_title . '</li>';
+
+			} else {
+
+				echo '<li><a href="' . get_the_permalink( get_page_by_title( 'artists' ) ) . '" title="' . get_the_title( get_page_by_title( 'artists'	) ) . '">' . get_the_title( get_page_by_title( 'artists'	) ) . '</a></li>';
+
+				echo '<li><a href="' . get_permalink( $post->post_parent ) . '" title="' . get_the_title(
+					$post->post_parent ) . '">' . get_the_title( $post->post_parent ) .'</a></li>';
+
+				echo '<li>' . the_title_attribute( 'echo=0' ) . '</li>';
+
+			}
+
+		// But what if it's just a single page all by itself?
 		} else if( is_single() ) {
 
 			// What kind of post is it?
 			$post_type = get_post_type();
 
 			// If it is a custom post type display name and link
-			if($post_type != 'post') {
+			if( $post_type != 'post' ) {
 
 				$post_type_object = get_post_type_object( $post_type );
 				$post_type_archive = get_post_type_archive_link( $post_type );
@@ -228,9 +247,9 @@ function breadcrumbs() {
 
 			// 404 page
 			echo '<li>' . '404 Error' . '</li>';
+
 		}
 
 		echo '</ol>';
 	}
 }
-

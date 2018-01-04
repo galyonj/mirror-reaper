@@ -71,32 +71,32 @@ if( $jumbotron->have_posts() ) : while( $jumbotron->have_posts() ) : $jumbotron-
 	</div>
 
 	<div class="container links-container">
-			<?php
-			$args = array(
-				'order'     => 'ASC',
-				'orderby'   => 'title',
-				'post_type' => 'page',
-				'post__in'  => array( 12, 14, 22, 85 )
-			);
+		<?php
+		$args = array(
+			'order'     => 'ASC',
+			'orderby'   => 'title',
+			'post_type' => 'page',
+			'post__in'  => array( 12, 14, 22, 85 )
+		);
 
-			$page_list = new WP_Query( $args );
+		$page_list = new WP_Query( $args );
 
-			if( $page_list->have_posts() ) : ?>
+		if( $page_list->have_posts() ) : ?>
 
-				<div class="row">
+			<div class="row">
 
-					<?php while( $page_list->have_posts() ) : $page_list->the_post(); ?>
+				<?php while( $page_list->have_posts() ) : $page_list->the_post(); ?>
 
-						<div class="col-xs-12 col-sm-6 link-item">
-							<a style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8)
-									100%), url(<?php the_post_thumbnail_url(); ?>)" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark>">
-								<?php the_title(); ?>
-							</a>
-						</div>
+					<div class="col-xs-12 col-sm-6 link-item">
+						<a style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8)
+							100%), url(<?php the_post_thumbnail_url(); ?>)" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark>">
+							<?php the_title(); ?>
+						</a>
+					</div>
 
-					<?php endwhile; ?>
-				</div>
+				<?php endwhile; ?>
+			</div>
 
-			<?php endif; wp_reset_postdata(); ?>
-		</div>
+		<?php endif; wp_reset_postdata(); ?>
+	</div>
 <?php get_footer(); ?>

@@ -10,6 +10,8 @@
  */
 ?>
 
-<div class="breadcrumbs-row">
-	<?php breadcrumbs(); ?>
+<div class="row breadcrumbs-row">
+	<div class="col-xs-12">
+		<?php breadcrumbs(); ?>
+	</div>
 </div>

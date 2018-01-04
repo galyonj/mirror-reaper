@@ -1,0 +1,197 @@
+/* ====================================
+ * Standard bulleted and numbered
+ * lists in article or aside content
+ * ==================================== */
+article,
+aside {
+	ol:not( [ class ] ) {
+		display: table;
+		margin:  0 0 floor(($line-height-computed / 2)) 0 !important;
+		padding: 0 0 0 0;
+
+		li {
+			counter-increment: table-ol;
+			display:           table-row;
+			float:             none;
+			font-weight:       300;
+			list-style:        none;
+
+			&:before {
+				content:       counter(table-ol) ".";
+				display:       table-cell;
+				padding-right: 10px;
+				text-align:    right;
+			}
+		}
+	}
+
+	ul:not( [ class ] ) {
+		display: table;
+		margin:  0 0 floor(($line-height-computed / 2)) 0 !important;
+		padding: 0 0 0 0;
+
+		li {
+			display:     table-row;
+			float:       none !important;
+			font-weight: 300;
+			list-style:   none;
+
+			&:before {
+				content:       "\25FC";
+				display:       table-cell;
+				padding-right: 10px;
+			}
+		}
+	}
+}
+
+/* ====================================
+ * Multi-column lists for
+ * images and stuff
+ * ==================================== */
+.four-column,
+.three-column,
+.two-column {
+	display:   flex;
+	flex-flow: row wrap;
+	margin:    0;
+	padding:   0;
+
+	li {
+		align-items: center;
+		flex:        1 100%;
+		list-style:  none;
+	}
+}
+
+.four-column {
+
+	@media #{ $small } {
+		li {
+			flex: 1 305px;
+			margin: 0 30px 30px 0;
+
+			&:nth-of-type( 2n ) {
+				margin: 0 0 30px 0;
+			}
+		}
+	}
+
+	@media #{ $medium } {
+		li {
+			flex: 1 455px;
+			margin: 0 30px 30px 0;
+		}
+	}
+
+	@media #{ $large } {
+		li {
+			flex: 1 222px;
+
+			&:nth-of-type( 2n ) {
+				margin: 0 30px 30px 0;
+			}
+
+			&:nth-of-type( 4n ) {
+				margin: 0 0 30px 0;
+			}
+		}
+	}
+}
+
+.three-column {
+	@media #{ $small } {
+		li {
+			flex: 1 305px;
+			margin: 0 30px 30px 0;
+
+			&:nth-of-type( 2n ) {
+				margin: 0 0 30px 0;
+			}
+		}
+	}
+
+	@media #{ $medium } {
+		li {
+			flex: 1 253px;
+			margin: 0 30px 30px 0;
+
+			&:nth-of-type( 2n ) {
+				margin: 0 0 30px 0;
+			}
+		}
+	}
+
+	@media #{ $large } {
+		li {
+			flex: 1 229px;
+			margin: 0 30px 30px 0;
+
+			&:nth-of-type( 2n ) {
+				margin: 0 30px 30px 0;
+			}
+
+			&:nth-of-type( 3n ) {
+				margin: 0 0 30px 0;
+			}
+		}
+	}
+}
+
+.two-column {
+	@media #{ $small } {
+		li {
+			flex: 1 305px;
+			margin: 0 30px 30px 0;
+
+			&:nth-of-type( 2n ) {
+				margin: 0 0 30px 0;
+			}
+		}
+	}
+
+	@media #{ $medium } {
+		li {
+			flex: 1 253px;
+			margin: 0 30px 30px 0;
+
+			&:nth-of-type( 2n ) {
+				margin: 0 0 30px 0;
+			}
+		}
+	}
+}
+
+/* ====================================
+ * Two column text lists
+ * ==================================== */
+.text-columns,
+.list--multi-col {
+	column-count:  1;
+	margin-bottom: ( $line-height-computed / 2 );
+	padding: 0;
+
+	li {
+		display:     block;
+		font-weight: 300;
+		list-style:  none;
+		margin:      0 !important;
+		width:       100%;
+	}
+}
+
+@media #{ $small } {
+	&.text-columns,
+	&.list--multi-col {
+		column-count: 2;
+		column-gap:   30px;
+
+		li {
+			display:     block;
+			font-weight: 300;
+			list-style:  none;
+			margin:      0 !important;
+			width:       100%;
+		}
+	}
+}

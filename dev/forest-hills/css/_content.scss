@@ -1,0 +1,66 @@
+::selection,
+::-moz-selection {
+	background: $brand-primary;
+	color:      $text-color;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+article {
+
+	p {
+		a {
+			font-weight: bold;
+			color: $text-color;
+			border-bottom: 1px solid darken( $brand-primary, 15% );
+			transition: all $speed $easing;
+
+			&:active,
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	// Normal list styling
+	ul:not( [class] ) {
+		display: table;
+		margin-left: 0;
+		padding-left: 0;
+		list-style: none;
+
+		li {
+			display: table-row;
+			font-weight: 300;
+
+			&:before {
+				content: "\25FC";
+				display: table-cell;
+				padding-right: 10px;
+			}
+		}
+	}
+
+	ol:not( [class] ) {
+		display: table;
+		margin-left: 0;
+		padding-left: 0;
+		list-style: none;
+
+		li {
+			counter-increment: table-ol;
+			display: table-row;
+			font-weight: 300;
+
+			&:before {
+				content: counter(table-ol) ".";
+				display: table-cell;
+				padding-right: 10px;
+				text-align: right;
+			}
+		}
+	}
+}

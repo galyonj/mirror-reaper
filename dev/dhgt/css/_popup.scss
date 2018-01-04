@@ -1,0 +1,48 @@
+.modal {
+	top: 10%;
+}
+.modal-content {
+	background-color: $gray-darker;
+	color:            $gray-lighter;
+}
+.modal-header,
+.modal-footer {
+	text-align: center;
+}
+
+.modal-header {
+	border-bottom: 1px solid darken( $gray-dark, 1% );
+
+	h2 {
+		margin-bottom: 0;
+	}
+}
+.modal-body {
+	//padding: 15px 50px;
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+.modal-footer {
+	border-top: 1px solid darken( $gray-dark, 1% );
+
+	h3 {
+		margin-top: 0;
+	}
+
+	a {
+		transition:  all $speed $easing;
+
+		&.nope {
+			margin-left: 15px;
+			color:       $gray-light;
+
+			&:active,
+			&:focus,
+			&:hover {
+				color: $gray-lighter;
+			}
+		}
+	}
+}

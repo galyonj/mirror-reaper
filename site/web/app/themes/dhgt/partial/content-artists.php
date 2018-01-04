@@ -3,50 +3,45 @@
  * Partial to output artists page content
  * Author     : John Galyon
  * Author URI : https://galyonj.com
- * Created    : October 19, 2017
- * @version 1.1.0
+ * Created    : November 29, 2017
+ * @version 1.0.0
  * @package WordPress
- * @subpackage galyonj
+ * @subpackage dhgt
  */ ?>
 
 <article id="<?php the_ID(); ?>" <?php post_class( 'col-xs-12' ); ?>>
-	<?php get_template_part( 'partial/content', 'header' ); ?>
-
 	<?php the_content(); ?>
 
 	<?php
-
 	$args = array(
-		'ignore_sticky_posts' => true,
-		'order'               => 'ASC',
-		'orderby'             => 'title',
-		'post_parent'         => $post->ID,
-		'post_type'           => 'page',
-		'post_status'         => 'publish',
+		'post_type' => 'artist',
+		'post_status' => 'publish',
+		'order'       => 'asc',
+		'orderby'     => 'title'
 	);
 
-	$artist_pages = new WP_Query( $args );
+	$artists = new WP_Query( $args );
 
-	if( $artist_pages->have_posts() ) : ?>
+	if( $artists->have_posts() ) : ?>
 
-		<div class="row artists-row">
+		<ul class="three-column full">
 
-			<?php while( $artist_pages->have_posts() ) : $artist_pages->the_post(); ?>
+			<?php while( $artists->have_posts() ) : $artists->the_post(); ?>
 
-				<div class="col-xs-12 col-sm-4 artist-item">
-					<h2><?php echo current( explode( ' ', get_the_title() ) ); ?></h2>
+				<li>
+					<h2><?php the_title(); ?></h2>
 					<p>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark">
-							<img src="<?php the_post_thumbnail_url(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" class="img-responsive">
+						<a href="<?php the_permalink(); ?>" rel="bookmark" title="Learn more about <?php the_title(); ?>.">
+							<img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive desat" alt="<?php the_title();
+							?>" title="<?php the_title(); ?>">
 						</a>
 					</p>
-					<?php the_excerpt(); ?>
-				</div>
+					<p><?php the_excerpt(); ?></p>
+				</li>
 
 			<?php endwhile; ?>
 
-		</div>
+		</ul>
 
 	<?php endif; wp_reset_postdata(); ?>
-
 </article>

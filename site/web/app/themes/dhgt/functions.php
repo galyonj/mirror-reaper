@@ -10,9 +10,9 @@
 
 // Require stuff
 require_once 'inc/breadcrumbs.php';
-require_once 'inc/pagination.php';
 require_once 'inc/headings.php';
 require_once 'inc/portfolios.php';
+require_once 'inc/related-posts.php';
 
 // Enable support for excerpts on page content types
 function add_page_excerpts() {
@@ -31,6 +31,8 @@ function custom_theme_features() {
 
 	// add support for post thumbnails
 	add_theme_support( 'post-thumbnails' );
+
+	add_image_size( 'admin-list-thumb', 80, 80, true);
 }
 add_action( 'after_setup_theme', 'custom_theme_features' );
 

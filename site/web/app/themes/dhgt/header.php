@@ -29,16 +29,42 @@
 
 	<?php wp_head(); ?>
 
-	<!-- Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50657249-1"></script>
 	<script>
-		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-		ga('create', 'UA-50657249-1', 'auto');
-		ga('send', 'pageview');
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-50657249-1');
 	</script>
-	<script async src='https://www.google-analytics.com/analytics.js'></script>
-	<!-- End Google Analytics -->
 </head>
 <body <?php body_class(); ?> data-scroll-id="page-top" id="page-top">
+<div class="modal fade" id="content-warning" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="content-warning-label">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title" id="content-warning-label">
+					Content Warning
+				</h2>
+			</div>
+			<div class="modal-body">
+				<p>As it's possible that you may see someone's naughty bits, good sense (and our lawyer) dictates
+					that some care be taken with regard to individuals who may view the images found on our website.</p>
+				<p>Don't come crying to us if you see a boob or some bad words or whatever on this website.</p>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-xs-12">
+						<h4>Don't be weird about this, okay?</h4>
+						<button type="submit" class="btn btn-primary" id="content-accept" value="confirm">Got it!</button>
+						<a href="https://www.google.com/" class="nope">Get me outta here.</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <div class="wrapper">
 	<a href="#" data-scroll class="scroll-top">
 		<i class="fa fa-chevron-up"></i>

@@ -36,7 +36,7 @@
     "php": ">=5.6",
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.9.0",
+    "johnpbloch/wordpress": "4.9.1",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/autodescription": "^3.0",
@@ -52,7 +52,11 @@
     "wpackagist-plugin/gmail-smtp": "^1.1",
     "wpackagist-plugin/woocommerce": "^3.2",
     "wpackagist-plugin/wordpress-importer": "^0.6.3",
-    "wpackagist-plugin/wp-facebook-reviews": "^3.1"
+    "wpackagist-plugin/wp-facebook-reviews": "^3.1",
+    "wpackagist-plugin/the-events-calendar": "^4.6",
+    "wpackagist-plugin/portfolio-gallery": "^2.4",
+    "wpackagist-plugin/advanced-custom-fields": "^5.6",
+    "wpackagist-plugin/custom-post-type-ui": "^1.5"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"

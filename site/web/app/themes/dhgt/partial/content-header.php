@@ -10,9 +10,8 @@
  */
 ?>
 
-<header class="header-row">
-	<?php content_heading(); ?>
-	<?php if( is_single() ) {
-		get_template_part( 'partial/content', 'meta' );
-	} ?>
+<header class="row header-row">
+	<div class="col-xs-12">
+		<?php content_heading(); ?>
+	</div>
 </header>

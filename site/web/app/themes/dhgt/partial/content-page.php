@@ -11,6 +11,5 @@
 
 <article id="<?php the_ID(); ?>" <?php post_class( 'col-md-8' ); ?>>
 	<?php get_template_part( 'partial/content', 'header' ); ?>
-
 	<?php the_content(); ?>
 </article>

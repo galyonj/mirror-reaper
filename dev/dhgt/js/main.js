@@ -17,6 +17,14 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 
 $( document ).ready( function() {
 
+	clearTimeout( timer );
+
+	var timer = setTimeout( function() {
+		if( document.cookie.indexOf( 'content-warning=' ) === -1 ) {
+			$( '#content-warning' ).modal( 'show' );
+		}
+	}, 1000 );
+
 	$( 'article img' ).not( '.img-responsive' ).addClass( 'img-responsive' );
 
 	$( 'figure/*, .instagram-media*/' ).removeAttr( 'style' );
@@ -54,6 +62,9 @@ $( document ).ready( function() {
 	} );
 } );
 
+// Swipebox stuff
+$(document).swipebox({ selector: '.swipebox' });
+
 // Make the footer stay at the bottom of the browser
 // window on short pages
 $( window ).on( 'load resize', function() {
@@ -83,4 +94,14 @@ $( window ).on( 'load resize', function() {
 	} else {
 		$( '.jumbotron' ).css( 'padding-top', content_width * 0.4);
 	}
+} );
+
+// Set the cookie for our content warning
+$( '#content-accept' ).on( 'click', function() {
+	// Create the cookie
+	Cookies.set( 'content-warning', 'true', { expires: 180 } );
+	console.log( 'Content warning accepted? ' + Cookies.get( 'content-warning' ) );
+
+	// Hide the dialog box
+	$( '#content-warning' ).modal( 'hide' );
 } );

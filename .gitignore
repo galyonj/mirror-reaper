@@ -3,6 +3,7 @@
 
 # hiding my fuckups
 *.old.*
+*_old
 
 # Ignore some backup stuff
 *.sql

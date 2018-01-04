@@ -11,6 +11,12 @@ wordpress_sites:
       - canonical: donnoshigherground.com
         redirects:
           - www.donnoshigherground.com
+      - canonical: foresthillsjacketregiment.test
+        redirects:
+          - www.foresthillsjacketregiment.test
+      - canonical: chainmaillebykitty.com
+        redirects:
+          - www.chainmaillebykitty.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:galyonj/mirror-reaper.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo

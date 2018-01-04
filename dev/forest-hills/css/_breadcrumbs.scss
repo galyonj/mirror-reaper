@@ -1,0 +1,31 @@
+.breadcrumb {
+	background: none;
+	list-style-type: none;
+	margin: 0;
+	padding: ceil(( $line-height-computed / 1.2 )) 0 ceil(( $line-height-computed / 1.5 ));
+
+	& > li {
+		font-size: $font-size-small;
+		font-weight: 600;
+
+		> a {
+			color: darken( $brand-primary, 20% );
+			transition: all $speed $easing;
+
+			&:active,
+			&:focus,
+			&:hover {
+				color:           darken($brand-primary, 50%);
+				text-decoration: none;
+			}
+		}
+
+		&:last-of-type {
+			font-weight: 300;
+		}
+
+		& + li:before {
+			content: "\00BB";
+		}
+	}
+}

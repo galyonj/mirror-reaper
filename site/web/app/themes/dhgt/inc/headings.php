@@ -70,9 +70,9 @@ function content_heading() {
 				// author pages, date-based archives, etc.
 				if( is_archive() ) {
 					if( is_category() ) {
-						echo '<h1>Category: &ldquo;';
-						single_cat_title( '', true );
-						echo '&rdquo;</h1>';
+						echo '<h1>';
+						single_cat_title( 'In Category: ', true );
+						echo '</h1>';
 
 						$category = get_the_category( $post->ID );
 						$cat_id   = get_cat_ID( $category[0]->name );
@@ -82,9 +82,9 @@ function content_heading() {
 						}
 
 					} elseif( is_tag() ) {
-						echo '<h1>Tag: &ldquo;';
-						single_tag_title( '', true);
-						echo '&rdquo;</h1>';
+						echo '<h1>';
+						single_tag_title( 'Tagged with: ', true);
+						echo '</h1>';
 
 						if( tag_description() ) {
 							echo '<p class="lead term-description">' . tag_description() . '</p>';
@@ -114,8 +114,10 @@ function content_heading() {
 			// such as a page, post, or attachment.
 			if( is_single() ) {
 
-				$category = get_the_category( $post->ID );
-				$cat_id   = get_cat_ID( $category[0]->name );
+				if( is_singular( 'post' ) ) {
+					$category = get_the_category( $post->ID );
+					$cat_id   = get_cat_ID( $category[0]->name );
+				}
 
 				echo '<h1>';
 				single_post_title( '', true);

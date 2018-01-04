@@ -51,7 +51,7 @@ gulp.task( 'lint', function() {
 
 gulp.task( 'scripts', function() {
 	return gulp
-		.src( [ 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', 'node_modules/swipebox/src/js/jquery.swipebox.js', 'node_modules/smooth-scroll/dist/js/smooth-scroll.js', 'dev/' + dir + '/js/main.js' ] )
+		.src( [ 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', 'node_modules/smooth-scroll/dist/js/smooth-scroll.js', 'node_modules/js-cookie/src/js.cookie.js', 'dev/common/js/swipebox.js', 'dev/' + dir + '/js/main.js' ] )
 		.pipe( concat( 'main.js' ) )
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( uglify() )

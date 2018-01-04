@@ -3,8 +3,8 @@ Theme Name:  Donno's Higher Ground Tattoo
 Theme URI:   https://donnoshigherground.com
 Author Name: John Galyon
 Author URI:  https://galyonj.com
-Description: Responsive, contemporary theme for Donno's Higher Ground Tattoo, located in Bryson City, NC.
-Version:     1.0
+Description: Responsive theme for Donno's Higher Ground Tattoo
+Version:     2.0
 License:     MIT
 License URI: https://github.com/galyonj/galyonj.com/LICENSE.md
 Text domain: dhgt
@@ -82,9 +82,9 @@ Text domain: dhgt
 @import 'front-page';
 @import 'content';
 @import 'reviews';
-@import 'artists';
 @import 'posts';
 @import 'jumbotron';
-@import '../../../node_modules/swipebox/scss/swipebox';
+@import 'swipebox';
+@import 'popup';
 //@import 'forms';
 //@import 'comments';

@@ -1,6 +1,6 @@
 <?php
 /**
- * Category Archive Template
+ * Category index template
  * Author     : John Galyon
  * Author URI : https://galyonj.com
  * Created    : May 24, 2017
@@ -13,6 +13,7 @@ get_header(); ?>
 
 <main class="container">
 	<?php get_template_part( 'partial/content', 'breadcrumbs' ); ?>
+	<?php get_template_part( 'partial/content', 'header' ); ?>
 	<div class="post-container">
 		<?php
 		if( have_posts() ) {

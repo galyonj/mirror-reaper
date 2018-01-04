@@ -8,6 +8,73 @@ h1 {
 	margin-top: 0;
 }
 
+.meta-row {
+	a {
+		font-weight: bold;
+	}
+}
+
+img {
+	&.desat {
+		@include desaturate;
+
+		&:active,
+		&:focus,
+		&:hover {
+			filter: none;
+		}
+	}
+}
+
+aside {
+	h2:first-of-type {
+		margin-top: 0;
+	}
+
+	.nav {
+		li {
+			a {
+				border-bottom: 1px solid $gray-lighter;
+				font-family:   $headings-font-family;
+				padding:       10px 15px 10px 15px;
+				transition:    all $speed $easing;
+
+				&:active,
+				&:focus,
+				&:hover {
+					background: none;
+				}
+			}
+
+			&:last-of-type {
+				a {
+					border-bottom: 0;
+					margin:        0;
+				}
+			}
+		}
+	}
+
+	.related-posts {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+
+			p {
+				margin-top: 5px;
+			}
+
+			&:last-of-type {
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
 article {
 
 	p {
@@ -51,6 +118,200 @@ article {
 				display: table-cell;
 				padding-right: 10px;
 				text-align: right;
+			}
+		}
+	}
+
+	ul {
+		&.four-column,
+		&.three-column,
+		&.two-column {
+			display:   flex;
+			flex-flow: row wrap;
+			margin:    0;
+			padding:   0;
+
+			li {
+				align-items: normal;
+				list-style:  none;
+				margin:      0 0 30px 0;
+				width:       100%;
+			}
+		}
+
+		&.four-column {
+			@media #{ $small } {
+				li {
+					margin: 0 30px 30px 0;
+					width:  305px;
+
+					&:nth-of-type( 2n ) {
+						margin: 0 0 30px 0;
+					}
+				}
+			}
+
+			@media #{ $medium } {
+				li {
+					margin: 0 30px 30px 0;
+					width:  455px;
+				}
+			}
+
+			@media #{ $large } {
+				li {
+					width: 222px;
+
+					&:nth-of-type( 2n ) {
+						margin: 0 30px 30px 0;
+					}
+
+					&:nth-of-type( 4n ) {
+						margin: 0 0 30px 0;
+					}
+				}
+			}
+
+			&.full {
+				@media #{ $small } {
+					li {
+						margin: 0 30px 30px 0;
+						width:  345px;
+
+						&:nth-of-type( 2n ){
+							margin: 0 0 30px 0;
+						}
+					}
+				}
+
+				@media #{ $medium } {
+					li {
+						margin: 0 30px 30px 0;
+						width:  212px;
+
+						&:nth-of-type( 2n ){
+							margin: 0 30px 30px 0;
+						}
+
+						&:not( :nth-of-type( 4n ) ) {
+							margin: 0 30px 30px 0;
+						}
+
+						&:nth-of-type( 4n ){
+							margin: 0 0 30px 0;
+						}
+					}
+				}
+
+				@media #{ $large } {
+					li {
+						width: 262px;
+					}
+				}
+			}
+		}
+
+		&.three-column {
+			@media #{ $small } {
+				li {
+					margin: 0 30px 30px 0;
+					width:  305px;
+
+					&:nth-of-type( 2n ) {
+						margin: 0 0 30px 0;
+					}
+				}
+			}
+
+			@media #{ $medium } {
+				li {
+					margin: 0 30px 30px 0;
+					width:  253px;
+
+					&:nth-of-type( 2n ) {
+						margin: 0 0 30px 0;
+					}
+				}
+			}
+
+			@media #{ $large } {
+				li {
+					margin: 0 30px 30px 0;
+					width:  229px;
+
+					&:nth-of-type( 2n ) {
+						margin: 0 30px 30px 0;
+					}
+
+					&:nth-of-type( 3n ) {
+						margin: 0 0 30px 0;
+					}
+				}
+			}
+
+			&.full {
+				@media #{ $small } {
+					li {
+						margin: 0 0 30px 0;
+						width: 100%;
+
+						&:nth-of-type( 2n ){
+							margin: 0 0 30px;
+						}
+					}
+				}
+
+				@media #{ $medium } {
+					li {
+						width: 293px;
+
+						&:not( :nth-of-type( 3n ) ) {
+							margin: 0 30px 30px 0;
+						}
+
+						&:nth-of-type( 3n ){
+							margin: 0 0 30px 0;
+						}
+					}
+				}
+
+				@media #{ $large } {
+					li {
+						width: 360px;
+
+						&:not( :nth-of-type( 3n ) ) {
+							margin: 0 30px 30px 0;
+						}
+
+						&:nth-of-type( 3n ){
+							margin: 0 0 30px 0;
+						}
+					}
+				}
+			}
+		}
+
+		&.two-column {
+			@media #{ $small } {
+				li {
+					margin: 0 30px 30px 0;
+					width:  305px;
+
+					&:nth-of-type( 2n ) {
+						margin: 0 0 30px 0;
+					}
+				}
+			}
+
+			@media #{ $medium } {
+				li {
+					margin: 0 30px 30px 0;
+					width:  253px;
+
+					&:nth-of-type( 2n ) {
+						margin: 0 0 30px 0;
+					}
+				}
 			}
 		}
 	}

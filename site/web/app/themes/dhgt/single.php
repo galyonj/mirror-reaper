@@ -12,9 +12,11 @@
 get_header(); ?>
 
 	<main class="container">
+		<?php get_template_part( 'partial/content', 'breadcrumbs' ); ?>
+		<?php get_template_part( 'partial/content', 'header' ); ?>
 		<div class="row">
 			<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-xs-12 col-md-8'); ?>>
-
+				<?php get_template_part( 'partial/content', 'meta' ); ?>
 				<?php
 				if( have_posts() ) {
 
@@ -22,10 +24,7 @@ get_header(); ?>
 
 						the_post();
 
-						get_template_part( 'partial/content', 'breadcrumbs' );
-						get_template_part( 'partial/content', 'header' );
 						the_content();
-						get_template_part( 'partial/content', 'footer' );
 
 					}
 
@@ -33,6 +32,7 @@ get_header(); ?>
 				?>
 
 			</article>
+			<?php get_template_part( 'partial/content', 'sidebar' ); ?>
 		</div>
 	</main>
 

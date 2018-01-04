@@ -1,26 +1,27 @@
 header:not( [class] ) {
 	border-bottom: 1px solid $gray-darker;
-	border-top: 10px solid $gray-darker;
+	border-top:    10px solid $gray-darker;
 }
 .navbar-header {
-	background: transparent;
-	border: 0;
-	height: 150px;
-	margin: 0;
+	background:  transparent;
+	border:      0;
+	height:      150px;
+	margin:      0;
 	padding-top: 10px;
 }
 .navbar-brand {
 	z-index: 1000;
+
 	img {
-		width: 100px;
+		width:  100px;
 		height: auto;
 	}
 }
 .navbar-default {
 	background-color: transparent;
-	border-color: transparent;
-	margin-bottom: 0;
-	border-width: 0;
+	border-color:     transparent;
+	margin-bottom:    0;
+	border-width:     0;
 
 	.navbar-toggle {
 		background: transparent;
@@ -72,24 +73,24 @@ header:not( [class] ) {
 }
 .navbar-default {
 	.navbar-form {
-		border: 0;
+		border:  0;
 		padding: 0 15px;
 	}
 }
 
 .navbar-collapse {
 	background: transparent;
-	border: transparent;
+	border:     transparent;
 
 	.navbar-nav {
-		border-top: 1px solid $gray-lighter;
+		border-top:    1px solid $gray-lighter;
 		margin-bottom: 0;
-		margin-top: 0;
+		margin-top:    0;
 
 		li {
 			border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-			padding: 0;
-			transition: all 200ms ease-in-out;
+			padding:       0;
+			transition:    all 200ms ease-in-out;
 
 			&:hover {
 				background-color: rgba(0, 0, 0, 0.15);
@@ -97,15 +98,13 @@ header:not( [class] ) {
 
 			&:last-of-type {
 				background-color: transparent;
-				border-bottom: none;
-				padding: 15px;
+				border-bottom:    none;
+				padding:          15px;
 			}
 
 			a {
 				color:       #cdcdcd;
 				font-size:   24px;
-				//font-family: $font-family-sans-serif;
-				//font-weight: 300;
 				font-family: $headings-font-family;
 				padding:     15px 15px 8px;
 				transition:  all 200ms ease-in-out;
@@ -125,17 +124,17 @@ header:not( [class] ) {
 
 	.search-query {
 		background: $gray-dark;
-		border: 1px solid rgba(0, 0, 0, 0);
-		color: #fff;
+		border:     1px solid rgba(0, 0, 0, 0);
+		color:      #fff;
 		transition: all 300ms ease-in-out;
 	}
 
 	.form-control {
 		&:focus {
 			background: $gray-base;
-			border: 1px solid rgba(0, 0, 0, 0.8);
+			border:     1px solid rgba(0, 0, 0, 0.8);
 			box-shadow: none;
-			color: #fff;
+			color:      #fff;
 		}
 	}
 }
@@ -143,13 +142,13 @@ header:not( [class] ) {
 @media #{ $small } {
 	.navbar {
 		.container {
-			padding: 0;
-			width: 100%;
+			padding:    0;
+			width:      100%;
 			background: $gray-darker;
 		}
 		.navbar-nav {
-			display: inline-block;
-			float: none;
+			display:        inline-block;
+			float:          none;
 			vertical-align: top;
 		}
 		.navbar-collapse {
@@ -162,9 +161,9 @@ header:not( [class] ) {
 			padding-top: 0;
 
 			> li {
-				border: none;
-				display: inline-block;
-				padding: 25px 40px 15px 0;
+				border:         none;
+				display:        inline-block;
+				padding:        25px 47px 15px 0;
 				vertical-align: middle;
 
 				&:last-of-type {
@@ -220,7 +219,7 @@ header:not( [class] ) {
 		.navbar-nav {
 
 			> li {
-				padding: 25px 78px 15px 0;
+				padding:        25px 85px 15px 0;
 				vertical-align: middle;
 
 				&:last-of-type {
@@ -249,7 +248,7 @@ header:not( [class] ) {
 		.navbar-nav {
 
 			> li {
-				padding: 25px 110px 15px 0;
+				padding:        25px 116px 15px 0;
 				vertical-align: middle;
 
 				&:last-of-type {

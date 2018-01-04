@@ -6,10 +6,10 @@
 
 	& > li {
 		font-size: $font-size-small;
-		font-weight: 600;
+		font-weight: 300;
 
-		&:last-of-type {
-			font-weight: 300;
+		a {
+			font-weight: 600;
 		}
 
 		& + li:before {

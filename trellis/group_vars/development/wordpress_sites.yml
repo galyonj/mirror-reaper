@@ -11,6 +11,12 @@ wordpress_sites:
       - canonical: donnoshigherground.test
         redirects:
           - www.donnoshigherground.test
+      - canonical: foresthillsjacketregiment.test
+        redirects:
+          - www.foresthillsjacketregiment.test
+      - canonical: chainmaillebykitty.com
+        redirects:
+          - www.chainmaillebykitty.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     admin_email: galyon.jb@gmail.com
     admin_user: jgalyon
