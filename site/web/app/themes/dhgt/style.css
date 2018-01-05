@@ -6166,6 +6166,23 @@ aside .related-posts {
     aside .related-posts li:last-of-type p {
       margin-bottom: 0; }
 
+aside .portfolio-list {
+  margin: 0;
+  padding: 0; }
+  aside .portfolio-list li {
+    border-bottom: 1px solid #eeeeee;
+    list-style: none; }
+    aside .portfolio-list li:last-of-type {
+      border: none; }
+    aside .portfolio-list li a {
+      font-family: "Special Elite", serif;
+      -webkit-transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+      transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+      display: block;
+      padding: 10px; }
+      aside .portfolio-list li a:active, aside .portfolio-list li a:focus, aside .portfolio-list li a:hover {
+        text-decoration: none; }
+
 article p a {
   font-weight: bold; }
 

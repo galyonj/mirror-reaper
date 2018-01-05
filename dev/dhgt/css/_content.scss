@@ -73,6 +73,33 @@ aside {
 			}
 		}
 	}
+
+	.portfolio-list {
+		margin:  0;
+		padding: 0;
+
+		li {
+			border-bottom: 1px solid $gray-lighter;
+			list-style:    none;
+
+			&:last-of-type {
+				border: none;
+			}
+
+			a {
+				font-family: $headings-font-family;
+				transition: all $speed $easing;
+				display: block;
+				padding: 10px;
+
+				&:active,
+				&:focus,
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
 }
 
 article {

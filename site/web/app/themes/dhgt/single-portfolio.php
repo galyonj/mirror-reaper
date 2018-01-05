@@ -19,7 +19,7 @@ $parent_slug = $parent->post_name; ?>
 		<?php get_template_part( 'partial/content', 'breadcrumbs' ); ?>
 		<?php get_template_part( 'partial/content', 'header' ); ?>
 		<div class="row">
-			<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-xs-12'); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-md-8'); ?>>
 
 				<?php if( have_posts() ) : ?>
 
@@ -31,7 +31,7 @@ $parent_slug = $parent->post_name; ?>
 
 						if( $images ) : ?>
 
-							<ul class="four-column full">
+							<ul class="three-column">
 
 								<?php foreach( $images as $image ) : ?>
 
@@ -55,6 +55,40 @@ $parent_slug = $parent->post_name; ?>
 				<?php endif; ?>
 
 			</article>
+			<?php
+
+			$parent = get_post( $post->post_parent );
+
+			$args = array(
+				'post_parent' => $parent->ID,
+				'post_type'   => 'portfolio',
+				'post_status' => 'publish',
+				'post__not_in' => array( $post->ID )
+			);
+
+			$portfolios = new WP_Query( $args );
+
+			if( $portfolios->have_posts() ) : ?>
+
+				<aside class="col-md-4" role="complementary">
+
+					<h2>Other Galleries</h2>
+
+					<ul class="portfolio-list">
+
+						<?php while( $portfolios->have_posts() ) : $portfolios->the_post(); ?>
+
+							<li>
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							</li>
+
+						<?php endwhile; ?>
+
+					</ul>
+
+				</aside>
+
+			<?php endif; wp_reset_postdata(); ?>
 		</div>
 	</main>
 

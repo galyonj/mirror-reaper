@@ -32,7 +32,7 @@
 					<h2><?php the_title(); ?></h2>
 					<p>
 						<a href="<?php the_permalink(); ?>" rel="bookmark" title="Learn more about <?php the_title(); ?>.">
-							<img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive desat" alt="<?php the_title();
+							<img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive" alt="<?php the_title();
 							?>" title="<?php the_title(); ?>">
 						</a>
 					</p>
