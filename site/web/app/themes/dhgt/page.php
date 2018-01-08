@@ -15,6 +15,7 @@ if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 	<main class="container">
 		<?php get_template_part( 'partial/content', 'breadcrumbs' ); ?>
+		<?php get_template_part( 'partial/content', 'header' ); ?>
 		<div class="row">
 			<?php
 			if( !is_page( 'artists' ) ) {
