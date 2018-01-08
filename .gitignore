@@ -14,6 +14,9 @@ _src
 # Ignore super secret stuff
 /trellis/.vault_pass
 
+#Plugins
+!site/web/app/plugins/advanced-custom-fields-pro
+
 # Node
 node_modules
 test/results
