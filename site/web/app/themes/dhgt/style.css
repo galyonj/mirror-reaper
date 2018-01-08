@@ -4,7 +4,7 @@ Theme Name:  Donno's Higher Ground Tattoo
 Theme URI:   https://donnoshigherground.com
 Author Name: John Galyon
 Author URI:  https://galyonj.com
-Description: Responsive theme for Donno's Higher Ground Tattoo
+Description: Responsive, contemporary theme for Donno’s Higher Ground Tattoo, located in Bryson City, NC.
 Version:     2.0
 License:     MIT
 License URI: https://github.com/galyonj/galyonj.com/LICENSE.md
@@ -6183,36 +6183,42 @@ aside .portfolio-list {
       aside .portfolio-list li a:active, aside .portfolio-list li a:focus, aside .portfolio-list li a:hover {
         text-decoration: none; }
 
-article p a {
-  font-weight: bold; }
-
-article ul:not([class]) {
+article ul:not([class]),
+aside ul:not([class]) {
   display: table;
-  margin-left: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
   list-style: none; }
-  article ul:not([class]) li {
+  article ul:not([class]) li,
+  aside ul:not([class]) li {
     display: table-row;
     font-weight: 300; }
-    article ul:not([class]) li:before {
+    article ul:not([class]) li:before,
+    aside ul:not([class]) li:before {
       content: "\25FC";
       display: table-cell;
       padding-right: 10px; }
 
-article ol:not([class]) {
+article ol:not([class]),
+aside ol:not([class]) {
   display: table;
-  margin-left: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
   list-style: none; }
-  article ol:not([class]) li {
+  article ol:not([class]) li,
+  aside ol:not([class]) li {
     counter-increment: table-ol;
     display: table-row;
     font-weight: 300; }
-    article ol:not([class]) li:before {
+    article ol:not([class]) li:before,
+    aside ol:not([class]) li:before {
       content: counter(table-ol) ".";
       display: table-cell;
       padding-right: 10px;
       text-align: right; }
+
+article p a {
+  font-weight: bold; }
 
 article ul.four-column, article ul.three-column, article ul.two-column {
   display: -webkit-box;

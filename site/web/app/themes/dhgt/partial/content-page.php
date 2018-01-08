@@ -10,6 +10,12 @@
  */ ?>
 
 <article id="<?php the_ID(); ?>" <?php post_class( 'col-md-8' ); ?>>
-	<?php get_template_part( 'partial/content', 'header' ); ?>
 	<?php the_content(); ?>
 </article>
+<?php if( get_field( 'page_sidebar' ) ) : ?>
+	<aside class="col-md-4" role="complementary">
+		<div class="well">
+			<?php the_field( 'page_sidebar' ); ?>
+		</div>
+	</aside>
+<?php endif; ?>
