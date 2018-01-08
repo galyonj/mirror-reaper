@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "14c81d7a6e24641ddad5bac9b8e25eed",
+    "content-hash": "d0960e66fcd1177cea48af8aba1a74a4",
     "packages": [
         {
             "name": "composer/installers",
@@ -422,6 +422,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/autodescription/"
+        },
+        {
+            "name": "wpackagist-plugin/bj-lazy-load",
+            "version": "1.0.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/bj-lazy-load/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/bj-lazy-load.zip?timestamp=1502280365",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/bj-lazy-load/"
         },
         {
             "name": "wpackagist-plugin/bootstrap-3-shortcodes",
