@@ -14,7 +14,7 @@ _src
 # Ignore super secret stuff
 /trellis/.vault_pass
 
-#Plugins
+# Exclude certain plugins from being ignored.
 !site/web/app/plugins/advanced-custom-fields-pro
 
 # Node
