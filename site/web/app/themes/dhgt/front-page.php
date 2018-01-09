@@ -28,7 +28,7 @@ if( $jumbotron->have_posts() ) : while( $jumbotron->have_posts() ) : $jumbotron-
 			<div class="row">
 				<div class="col-xs-12">
 					<span class="jumbotron-text">
-						<a href="<?php the_permalink(); ?>" title="Read <?php the_title(); ?>">
+						<a id="<?php the_ID(); ?>" href="<?php the_permalink(); ?>" title="Read <?php the_title(); ?>">
 							<?php the_title(); ?>
 						</a>
 						<p class="hidden-xs"><?php echo get_the_excerpt(); ?></p>
@@ -88,8 +88,11 @@ if( $jumbotron->have_posts() ) : while( $jumbotron->have_posts() ) : $jumbotron-
 				<?php while( $page_list->have_posts() ) : $page_list->the_post(); ?>
 
 					<div class="col-xs-12 col-sm-6 link-item">
-						<a style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8)
-							100%), url(<?php the_post_thumbnail_url(); ?>)" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark>">
+						<a id="<?php the_ID(); ?>"
+						style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%), url(<?php the_post_thumbnail_url(); ?>)"
+						href="<?php the_permalink(); ?>"
+						title="<?php the_title(); ?>"
+						rel="bookmark>">
 							<?php the_title(); ?>
 						</a>
 					</div>
