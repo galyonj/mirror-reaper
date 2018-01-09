@@ -113,10 +113,17 @@ function portfolio_attributes_meta_box( $post ) {
 	wp_dropdown_pages( $pages );
 }
 
+function artist_rewrite_rules() {
+	add_rewrite_tag( '%artist%', '([^/]+)', 'artist=' );
+	add_permastruct( 'artist', '/artists/%artist%', false );
+	add_rewrite_rule( '^artists/([^/]+)/([^/]+)/?','index.php?artist=$matches[2]','top' );
+}
+add_action( 'init', 'artist_rewrite_rules' );
+
 function portfolio_rewrite_rules() {
-	add_rewrite_tag('%portfolio%', '([^/]+)', 'portfolio=');
-	add_permastruct('portfolio', '/artists/%artist%/%portfolio%', false);
-	add_rewrite_rule('^artists/([^/]+)/([^/]+)/?','index.php?portfolio=$matches[2]','top');
+	add_rewrite_tag( '%portfolio%', '([^/]+)', 'portfolio=' );
+	add_permastruct( 'portfolio', '/artists/%artist%/%portfolio%', false );
+	add_rewrite_rule( '^artists/([^/]+)/([^/]+)/?','index.php?portfolio=$matches[2]','top' );
 }
 add_action( 'init', 'portfolio_rewrite_rules' );
 
